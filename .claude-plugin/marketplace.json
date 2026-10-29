@@ -1,0 +1,13 @@
+{
+  "name": "pulsework",
+  "owner": {
+    "name": "Pulsework"
+  },
+  "plugins": [
+    {
+      "name": "pulsework",
+      "source": "./",
+      "description": "Pulsework works inside your Claude: your morning and evening from your real day, written by Pulsework, read and answered here."
+    }
+  ]
+}

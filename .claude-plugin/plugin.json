@@ -1,0 +1,10 @@
+{
+  "name": "pulsework",
+  "version": "0.1.1",
+  "description": "Pulsework works inside your Claude: your morning and evening from your real day, written by Pulsework, read and answered here.",
+  "author": {
+    "name": "Pulsework"
+  },
+  "homepage": "https://pulsework.co",
+  "license": "MIT"
+}
