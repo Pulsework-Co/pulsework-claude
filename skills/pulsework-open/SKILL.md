@@ -37,8 +37,8 @@ A source that is not connected is named in `where_i_looked` as not reachable, on
 
 ### c. Write the sections
 
-- `headline`: three lines on what today is for, judged from her goals in the brief.
-- `asks_of_her`: each a quote: who asked what, where, when.
+- `headline`: one paragraph in plain words, at most three sentences, on what today is for, judged from her goals and what was read. The first sentence leads the email.
+- `asks_of_her`: one ask per line, with the quote, who asked, where and when. When you have a view, add a second indented line `Suggested: …` with one sentence. Keep at most six asks; put the rest in `threads`.
 - `meetings`: today's, with who, and any prep visible in the threads.
 - `threads`: open threads that touch her goals, one line each, with a quote.
 - `decisions`: what was decided since `since`, with the quote.
@@ -66,11 +66,12 @@ If Pulsework answered `paused: true` or `stopped: true` instead of a morning, th
 
 Otherwise:
 
-Show her the morning Pulsework returned, as it is. Do not rewrite it. If it carries a question, show the question after it as a one-line ask with its three answers.
+Show her the morning Pulsework returned, as it is. Do not rewrite it. Keep its `attention` refs in order for this conversation. If it carries a question, show the question after it as a one-line ask with its three answers.
 
 ### g. Her words
 
-- Her reply to the question: `pulsework_note(text, answer_to)`.
+- A reply starting with a number answers that numbered attention row. Send her answer with `pulsework_note(text, answer_to)`, setting `answer_to` to that row’s ref.
+- For a numbered goal question, use `pulsework_note(text, answer_to)` as today, setting `answer_to` to the goal question id and `text` to her goal answer.
 - Anything else she says about her day: `pulsework_note(text)`.
 
 ### h. Work she starts from this morning

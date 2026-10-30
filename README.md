@@ -1,6 +1,6 @@
 # Pulsework for Claude
 
-Pulsework writes your morning and your evening from your real day.
+Pulsework writes your morning and your evening from your real day. Your morning in Claude is the same morning as the email and Today.
 Your Claude reads your Slack, mail, calendar and the folders you choose, and hands Pulsework a short digest with quotes.
 Pulsework writes the morning and the evening from it, and you read and answer them here, in Claude.
 
