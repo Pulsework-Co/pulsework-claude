@@ -66,7 +66,7 @@ If Pulsework answered `paused: true` or `stopped: true` instead of a morning, th
 
 Otherwise:
 
-Show her the morning Pulsework returned, as it is. Do not rewrite it. Keep its `attention` refs in order for this conversation. If it carries a question, show the question after it as a one-line ask with its three answers.
+Show her the morning Pulsework returned, as it is. Its three parts are "Needs your attention today", "Objectives this week", and "Complete your setup" when present. Do not rewrite it. Keep its `attention` refs in order for this conversation. If it carries a question, show the question after it as a one-line ask with its three answers.
 
 ### g. Her words
 
