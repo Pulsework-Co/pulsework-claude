@@ -15,7 +15,7 @@ More about Pulsework: https://pulsework.co
 ## What leaves your Claude
 
 - The short digest at open and close from Slack, mail, calendar and the folders you choose: quoted lines with who, where and when, who appeared with counts, and what was read.
-- The settings you give it in setup: goals (including pasted team and company text), this week's lines, who you update, meetings, your morning and evening times and time zone, and where to look (including folder paths).
+- The settings you give it in setup: goals (including pasted team and company text), this week's objectives, who you update, meetings, your morning and evening times and time zone, and where to look (including folder paths).
 - Notes and answers you give it.
 - If you leave the switch on in Pulsework Settings, a few lines about work you did with it.
 

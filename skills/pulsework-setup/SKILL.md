@@ -32,7 +32,7 @@ Read `setup_done` in the brief. It has five parts: `goals`, `week`, `audiences`,
 
 1. Her own goals: "Your goals: What you're being measured on." Call `pulsework_setup(goals)` with her answer straight away, each goal as `{level: personal, text}`. Keep the goals you wrote; the next question needs them.
 2. Then anything handed down from her team or company: "Handed down to you: Your team's goals or the company's, as they reached you." "Paste it as it came, slides, bullets, acronyms and all". Keep what she pastes word for word. A `goals` call replaces her goal list, so call `pulsework_setup(goals)` again with the whole list: her own goals from question 1 exactly as you wrote them, then what came from her team as `team` and what came from her company as `company`; at most 12 in all. Pulsework reads it back and says what each line asks of you. If nothing was handed down, make no second call.
-3. This week's lines: "What does this week need to look like?" Up to three lines, in her own words, kept as she wrote them. Call `pulsework_setup(week)` with her answer straight away, each line as `{item}`.
+3. This week's objectives: "What does this week need to look like?" Up to three lines, in her own words, kept as she wrote them. Call `pulsework_setup(week)` with her answer straight away, each line as `{item}`.
 4. Who she updates and how often: "Who you answer to: Who hears from you, and how often." Call `pulsework_setup(audiences)`, each as `{name, role, cadence}`, at most 4.
 5. Her morning time: "Morning email time". Call `pulsework_setup(morning_time)`.
 6. Her evening time: "Evening question time". Call `pulsework_setup(evening_time)`.
