@@ -22,7 +22,7 @@ These rules hold in every Pulsework skill, word for word.
 
 ### a. Read the brief
 
-Call `pulsework_brief(close)`. Its `since` is the later of the last hand-up and last approved close, or 24 hours ago if neither exists.
+Call `pulsework_brief(close)`. Choose `day` as `day_opened` when present, otherwise `working_day`. Your first line to her names it, for example "Closing Thursday 29 October" (weekday, day, month). If she says it is the wrong day, call the hand-up again with the day she names. Its `since` is the later of the last hand-up and last approved close, or 24 hours ago if neither exists.
 
 ### b. Read what happened since `since`
 
@@ -54,7 +54,7 @@ If the brief carried `recall` asks, look for each one by its words. Add what you
 
 ### e. Hand up
 
-Call `pulsework_hand_up(close, since, items_read, sections)`, with `since` from the brief, `items_read` as the number of messages, threads, events and files you read, and the sections above.
+Call `pulsework_hand_up(close, since, items_read, sections, day)`, with `since` from the brief, `items_read` as the number of messages, threads, events and files you read, and the sections above.
 
 Before making that call, measure the sections as Pulsework will. Each section's text is at most 2,048 bytes in UTF-8, and the whole `sections` object, written as JSON, is at most 16,000 bytes. Count bytes, including the JSON encoding of the whole object. A letter with an accent, a name in another script or an emoji can take more than one byte. If a section or the whole is over, shorten `threads` first, then `people`, dropping whole lines from the end, never cutting inside a quote. Keep `headline`, `asks_of_her`, `decisions` and `where_i_looked` whole: never drop a line from them and never shorten them. To make the whole fit, these are the only two sections you shorten. If one of the four kept whole is over its own 2,048 bytes, or the whole is still over with `threads` and `people` shortened to nothing, do not send it.
 
