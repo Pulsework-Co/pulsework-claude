@@ -66,7 +66,7 @@ If Pulsework answered `paused: true` or `stopped: true` instead of an evening dr
 
 Otherwise:
 
-Show her the evening draft Pulsework returned, as it is, with its link to Today, and say: "Edit or save it there, or tell me what to change and I'll note it."
+Show her the evening draft Pulsework returned, as it is, with its link to Today, and say: "Edit or save it there, or tell me what to change and I'll note it." If `question` is present, show its text and quote on one line. If `to_confirm` is present, show its line and quotes on one line. Keep each id for her answer.
 
 ### g. Her words
 
