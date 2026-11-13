@@ -66,11 +66,11 @@ If Pulsework answered `paused: true` or `stopped: true` instead of an evening dr
 
 Otherwise:
 
-Show her the evening draft Pulsework returned, as it is, with its link to Today, and say: "Edit or save it there, or tell me what to change and I'll note it." If `question` is present, show its text and quote on one line. If `to_confirm` is present, show its line and quotes on one line. Keep each id for her answer.
+Show her the evening draft Pulsework returned, as it is, with its link to Today, and say: "Edit or save it there, or tell me what to change and I'll note it." Show each `decision_questions` row with its numbered options. Keep its `question_id` and `question_revision` with that row for her answer. If an older `question` or `to_confirm` is present without a matching choice row, show its text and quote as a note prompt without inventing options.
 
 ### g. Her words
 
-- Her reply to a question: `pulsework_note(text, answer_to)`.
+- For a question or win with numbered options, map her words only when they identify one displayed question and one option. Call `pulsework_note(text, answer_to)` with `text` set to the option number and `answer_to` set to the displayed `<question_id>:<question_revision>`. Repeat its acknowledgment, including a correction or duplicate. If either identity or option is missing, keep her words as a note and tell her no answer changed.
 - Anything else she says about her day, including what to change: `pulsework_note(text)`.
 
 Never approve or save the day from here. That happens on Today.

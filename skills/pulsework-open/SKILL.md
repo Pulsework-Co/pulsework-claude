@@ -70,8 +70,10 @@ Show her the morning Pulsework returned, as it is. Its three parts are "Needs yo
 
 ### g. Her words
 
-- A reply starting with a number answers that numbered attention row. Send her answer with `pulsework_note(text, answer_to)`, setting `answer_to` to that row’s ref.
-- For a numbered goal question, use `pulsework_note(text, answer_to)` as today, setting `answer_to` to the goal question id and `text` to her goal answer.
+- For a choice she clearly names, call `pulsework_note(text, answer_to)` with `text` set to the option's exact number and `answer_to` set to the displayed `<question_id>:<question_revision>`. Her correction uses the same call. Tell her the tool's acknowledgment, including what changed or that the answer was already recorded.
+- For an older attention row with no numbered choices, keep her words as a note by calling `pulsework_note(text, answer_to)`, setting `answer_to` to that row’s ref.
+- If her words do not identify one displayed question and one option, send them as `pulsework_note(text)` and say they were kept as a note. Never infer a mapping from a bare number when more than one question was shown, or from a numbered sentence such as "2. Actually, keep the original plan".
+- For the older goal question with "Still right", "Done", and "This changed:", call `pulsework_note(text, answer_to)`, setting `answer_to` to the goal question id and `text` to her exact goal answer until it carries a choice id and revision.
 - Anything else she says about her day: `pulsework_note(text)`.
 
 ### h. Work she starts from this morning
