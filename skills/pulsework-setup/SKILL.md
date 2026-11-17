@@ -1,6 +1,6 @@
 ---
 name: pulsework-setup
-description: Use when the user wants to set up Pulsework in Claude for the first time, or asks to redo the setup.
+description: Use when the user wants to set up Pulsework in her assistant for the first time, or asks to redo the setup.
 ---
 
 # Pulsework setup
@@ -15,7 +15,7 @@ These rules hold in every Pulsework skill, word for word.
 - **Quote, never invent.** Every fact in a hand-up is a quote (a sentence or fragment as it appeared) with who, where and when. If it cannot be quoted, it is not in the digest.
 - **Verify before listing.** An item is "open" only if the thread or message was looked at in this run.
 - **Plain words. Short.** No praise, no coaching, no em dashes. Her names for things.
-- **Never send anything to anyone.** The skills never post to Slack, send mail, or reply on her behalf, and never ask her Claude's connectors to. If she asks her Claude to send something herself in the same conversation, that is her Claude acting as her, outside Pulsework; Pulsework only ever receives a summary afterwards.
+- **Never send anything to anyone.** The skills never post to Slack, send mail, or reply on her behalf, and never ask her assistant's connectors to. If she asks her assistant to send something herself in the same conversation, that is her assistant acting as her, outside Pulsework; Pulsework only ever receives a summary afterwards.
 - **Bounds**: each section at most 2,048 bytes in UTF-8; at most eight sections; a hand-up that would be larger is cut by shortening `threads` first, then `people`; `headline`, `asks_of_her`, `decisions` and `where_i_looked` are kept whole.
 
 ## Steps
@@ -85,11 +85,11 @@ Propose which of these look like her work, judged by recent activity, and ask he
 
 Ask which folders on her computer matter to her work.
 
-Offer, and wait for her yes, to look for the folders her Claude and ChatGPT keep on this computer: the Claude desktop app's project and output folders, and ChatGPT's, where they exist. Name each path you find. Never read inside them until she says yes.
+Offer, and wait for her yes, to look for the folders her Claude and ChatGPT apps keep on this computer, where they exist. Name each path you find. Never read inside them until she says yes.
 
 Explain what files cost her, in two lines:
 
-"A run that reads files on your computer runs on your computer, so the Claude desktop app must be open and the computer awake at the run's time.
+"A run that reads files on your computer runs on your computer, so the desktop app running this skill must be open and the computer awake at the run's time.
 A run with no folders runs in the cloud and needs nothing."
 
 She chooses. Keep the folders she names, as paths, for the hand-up in step f; they become `where_to_look.folders`. No folders is fine.
@@ -109,7 +109,7 @@ If Pulsework answers `too_large`, it names the section that is over, or the whol
 
 ### g. The two daily runs
 
-She needs exactly one of each of these two scheduled tasks in Claude:
+She needs exactly one of each of these two scheduled tasks in the assistant running this skill:
 
 - "Pulsework day open", daily at her morning time minus 20 minutes, with the prompt "Run the Pulsework day open skill."
 - "Pulsework day close", daily at her evening time minus 20 minutes, with the prompt "Run the Pulsework day close skill."
@@ -121,7 +121,7 @@ First look at her scheduled tasks for ones with these two names. A setup that is
 - A task that exists: update its time, prompt and folders to the ones above. Do not create a second one.
 - A task that is missing: create it.
 
-If this Claude cannot read or change scheduled tasks, give her the two names, the two prompts, the two times and the folders in one copy block, and say where they live: Scheduled tasks in the Claude desktop app. Tell her that if a task with that name is already there, she changes it to match rather than adding another, so each runs once a day.
+If this assistant cannot read or change scheduled tasks, give her the two names, the two prompts, the two times and the folders in one copy block, and say where they live: Scheduled tasks in the desktop app running this skill. Tell her that if a task with that name is already there, she changes it to match rather than adding another, so each runs once a day.
 
 ### h. What happens next
 
@@ -129,4 +129,4 @@ Tell her, in three lines, what happens tomorrow morning: the day open run reads 
 
 ### i. On a company plan
 
-When the connection runs through the local helper rather than the connector, say once, in these words: "Your company's Claude administrator can see and turn off this helper." Say nothing more about it, and give no advice about her administrator.
+When a Claude connection runs through its local helper rather than the connector, say once, in these words: "Your company's Claude administrator can see and turn off this helper." Say nothing more about it, and give no advice about her administrator.
