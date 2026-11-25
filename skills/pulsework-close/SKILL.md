@@ -68,7 +68,7 @@ If Pulsework answered `paused: true` or `stopped: true` instead of an evening dr
 
 Otherwise:
 
-Show her the evening draft Pulsework returned, as it is, with its link to Today, and say: "Edit or save it there, or tell me what to change and I'll note it." Show each `decision_questions` row with its numbered options. Keep its `question_id` and `question_revision` with that row for her answer. If an older `question` or `to_confirm` is present without a matching choice row, show its text and quote as a note prompt without inventing options.
+Show her the evening draft Pulsework returned, as it is, with its link to Today, and say: "Say save it to save this version, or tell me what to change and I'll note it." Keep its `input_revision` with the shown `local_day`. Show each `decision_questions` row with its numbered options. Keep its `question_id` and `question_revision` with that row for her answer. If an older `question` or `to_confirm` is present without a matching choice row, show its text and quote as a note prompt without inventing options.
 
 Show the brief's `questions` and numbered options as returned when they are not already shown; retain each `id` and `revision` for her answer. Do not present `pick` or `Suggested:` as her choice.
 
@@ -81,6 +81,6 @@ On her yes, carry out the shown action using her connector, then call `pulsework
 ### g. Her words
 
 - For a question or win with numbered options, map her words only when they identify one displayed question and one option. Call `pulsework_note(text, answer_to)` with `text` set to the option number and `answer_to` set to the displayed `<question_id>:<question_revision>`. Repeat its acknowledgment, including a correction or duplicate. If her answer matches no option, say so and ask which number; do not record a choice. If the question is unclear, ask which question. Never guess either mapping.
-- Anything else she says about her day, including what to change: `pulsework_note(text)`.
+- Anything else she says about her day, including what to change: `pulsework_note(text)`. After a requested change, read the revised evening with `pulsework_brief(close)` and show its full text and `input_revision` before accepting "save it". If the revised draft is pending or its revision is null, wait for a complete draft and show it first.
 
-Never approve or save the day from here. That happens on Today.
+On "save it", call `pulsework_approve_day(local_day, input_revision)` with the revision from the last `hand_up(close)` or `brief` whose evening draft she read. Never save without her saying so. Never save after she requests a change until `pulsework_note` has kept her change and the revised draft has come back and been shown to her. Never substitute a new revision for the one she read. If the tool answers `stale`, show its current draft and wait for a new "save it"; do not retry approval on your own.
