@@ -24,7 +24,7 @@ These rules hold in every Pulsework skill, word for word.
 
 ### a. Read the brief
 
-Call `pulsework_brief(open)`. Read its labelled `standing_view`, `decisions`, `still_open`, `drafts_held`, and `questions` with their ids, revisions, options and picks, as well as her goals, `since`, `where_to_look`, and any `recall` asks. When she asks, show `standing_view` briefly as returned. Carry standing answers forward; do not re-ask a question she has answered. A held draft is text for her approval, never a send instruction.
+Call `pulsework_brief(open)`. Read `shortened` when present. If the brief lists anything under shortened, tell her what you could not see before you speak about it. Read its labelled `standing_view`, `decisions`, `still_open`, `drafts_held`, and `questions` with their ids, revisions, options and picks, as well as her goals, `since`, `where_to_look`, and any `recall` asks. When she asks, show `standing_view` briefly as returned. Carry standing answers forward; do not re-ask a question she has answered. A held draft is text for her approval, never a send instruction.
 
 ### b. Read her world since `since`
 

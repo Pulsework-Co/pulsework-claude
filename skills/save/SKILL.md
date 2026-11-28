@@ -24,7 +24,7 @@ These rules hold in every Pulsework skill, word for word.
 
 ### a. Read the brief
 
-Call `pulsework_brief(close)`. Read its labelled `standing_view`, `decisions`, `still_open`, `drafts_held`, and `questions` with their ids, revisions, options and picks. When she asks, show `standing_view` briefly as returned. Carry standing answers forward; a held draft waits for her approval. Choose `day` as `day_opened` when present, otherwise `working_day`. Your first line to her names it, for example "Closing Thursday 29 October" (weekday, day, month). If she says it is the wrong day, call the hand-up again with the day she names. Its `since` is the later of the last hand-up and last approved close, or 24 hours ago if neither exists.
+Call `pulsework_brief(close)`. Read `shortened` when present. If the brief lists anything under shortened, tell her what you could not see before you speak about it. Read its labelled `standing_view`, `decisions`, `still_open`, `drafts_held`, and `questions` with their ids, revisions, options and picks. When she asks, show `standing_view` briefly as returned. Carry standing answers forward; a held draft waits for her approval. Choose `day` as `day_opened` when present, otherwise `working_day`. Your first line to her names it, for example "Closing Thursday 29 October" (weekday, day, month). If she says it is the wrong day, call the hand-up again with the day she names. Its `since` is the later of the last hand-up and last approved close, or 24 hours ago if neither exists.
 
 ### b. Read what happened since `since`
 
